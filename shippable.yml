@@ -1,6 +1,6 @@
 integrations:
   hub:
-    - integrationName: aws-fuji
+    - integrationName: aws-test
       type: ecr
       region: ap-northeast-1
       branches:
