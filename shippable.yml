@@ -1,0 +1,15 @@
+integrations:
+  hub:
+    - integrationName: aws-fuji
+      type: ecr
+      region: ap-northeast-1
+      branches:
+        only:
+          - master
+          - dev
+
+build:
+  post_ci:
+    #Commit the container only if you want all the artifacts from the CI step
+    - docker commit $SHIPPABLE_CONTAINER_NAME 389024300663.dkr.ecr.us-east-1.amazonaws.com/fuji-dev-dag:latest
+    - docker push 389024300663.dkr.ecr.us-east-1.amazonaws.com/fuji-dev-dag:latest

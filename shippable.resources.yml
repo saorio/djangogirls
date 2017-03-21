@@ -1,6 +1,0 @@
-- name: github-repository                      #required
-  type: gitRepo                                #required
-  integration: github_saorio                   #this is your github integration name
-  pointer:
-    sourceName: saorio/djangogirls              #required
-    branch: master                              #optional
